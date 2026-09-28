@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0b12">
+  <meta name="description" content="基于《明日方舟》SideStory「挽歌燃烧殆尽」活动录屏制作的交互导览：探索关卡路线、奖励兑换、剧情回忆与寻访画面。">
+  <title>挽歌燃烧殆尽 · 交互导览</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230c0b12'/%3E%3Cpath d='M19 48h26M30 45c-13-10 3-18 0-29 16 11 17 23 7 29 2-7-4-12-7-14 1 7-5 10 0 14Z' fill='none' stroke='%23e7d2a2' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至内容</a>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="返回首页">
+      <span class="brand-mark">E<span>/</span>A</span>
+      <span class="brand-copy">WHEN ELEGIES ARE ASHES <small>INTERACTIVE ARCHIVE</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="主导航">
+      <a href="#overview">总览</a><a href="#stages">关卡路线</a><a href="#rewards">奖励兑换</a><a href="#archive">影像档案</a>
+    </nav>
+    <button class="header-action open-video" type="button"><span class="play-triangle" aria-hidden="true"></span>观看录屏 <span>↗</span></button>
+    <button class="menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="打开导航"><span></span><span></span></button>
+  </header>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="移动端导航" hidden>
+    <a href="#overview">总览</a><a href="#stages">关卡路线</a><a href="#rewards">奖励兑换</a><a href="#archive">影像档案</a>
+    <button class="open-video" type="button">观看录屏 ↗</button>
+  </nav>
+
+  <main id="main">
+    <section class="hero section-shell" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span>SIDE STORY <span class="eyebrow-no">/ 01</span></div>
+        <p class="hero-overline">《明日方舟》活动录屏 · 交互导览</p>
+        <h1 id="hero-title">挽歌<br><em>燃烧殆尽</em></h1>
+        <p class="hero-en">WHEN ELEGIES ARE ASHES</p>
+        <p class="hero-description">从活动入口到 EA 关卡、奖励兑换与回忆画集，沿着录屏中的界面，重新浏览这场 SideStory。</p>
+        <div class="hero-actions"><a class="button button-primary" href="#stages">探索关卡路线 <span>↗</span></a><button class="button button-ghost open-video" type="button"><span class="play-triangle" aria-hidden="true"></span>播放活动录屏</button></div>
+        <div class="hero-facts" aria-label="录屏内容摘要"><div><strong>EA-1—EA-8</strong><span>常规关卡节点</span></div><div><strong>EA-EX-1</strong><span>延伸关卡画面</span></div><div><strong>10 / 10</strong><span>蚀刻章套组画面</span></div></div>
+      </div>
+      <div class="hero-art-wrap">
+        <div class="hero-art-frame"><img src="assets/hero.webp" alt="活动主画面中紫色与火焰交错的角色插画" fetchpriority="high"><div class="hero-art-shade"></div><span class="image-index">FIG. 01 / EVENT ENTRANCE</span><button class="hero-play open-video" type="button" aria-label="观看活动录屏"><span class="play-triangle" aria-hidden="true"></span></button></div>
+        <div class="hero-side-label" aria-hidden="true">THE FIRE STILL BURNS / 01</div>
+      </div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>基于用户提供的录屏整理</span></div>
+    </section>
+
+    <section class="overview section-shell" id="overview" aria-labelledby="overview-title">
+      <div class="section-heading"><div><p class="section-kicker">01 / THE STRUCTURE</p><h2 id="overview-title">四个入口，串起活动全貌<span class="title-dot">.</span></h2></div><p>点击模块，直达对应界面与交互。</p></div>
+      <div class="module-grid">
+        <a class="module-card" href="#stages"><span class="module-no">01</span><span class="module-symbol">◇</span><h3>关卡路线</h3><p>从 EA-1 至 EA-8，再到 EA-EX-1 的关卡节点。</p><span class="module-link">查看地图 <span>↗</span></span></a>
+        <a class="module-card" href="#rewards"><span class="module-no">02</span><span class="module-symbol">▣</span><h3>奖励兑换</h3><p>浏览「待开启的生活」中的物品，试算兑换组合。</p><span class="module-link">查看清单 <span>↗</span></span></a>
+        <a class="module-card" href="#archive"><span class="module-no">03</span><span class="module-symbol">✧</span><h3>剧情与回忆</h3><p>切换「新火重燃」「照我以火」与回忆画集画面。</p><span class="module-link">浏览影像 <span>↗</span></span></a>
+        <a class="module-card" href="#headhunt"><span class="module-no">04</span><span class="module-symbol">✳</span><h3>寻访画面</h3><p>查看录屏最后呈现的「自火中归还」界面。</p><span class="module-link">查看展示 <span>↗</span></span></a>
+      </div>
+    </section>
+
+    <section class="stages section-shell" id="stages" aria-labelledby="stages-title">
+      <div class="section-heading section-heading-tight"><div><p class="section-kicker">02 / OPERATION PATH</p><h2 id="stages-title">沿着关卡，继续向前<span class="title-dot">.</span></h2></div><p>选择章节与节点，查看录屏中对应的地图画面。</p></div>
+      <div class="stage-explorer">
+        <div class="stage-left">
+          <div class="segmented-control" role="tablist" aria-label="关卡章节"><button type="button" role="tab" id="tab-main" aria-controls="stage-panel" aria-selected="true" data-stage-mode="main">摇曳的影 <small>FLICKERING SHADOWS</small></button><button type="button" role="tab" id="tab-ex" aria-controls="stage-panel" aria-selected="false" tabindex="-1" data-stage-mode="ex">将熄的火 <small>DYING FLAMES</small></button></div>
+          <div id="stage-panel" role="tabpanel" aria-labelledby="tab-main" tabindex="0">
+            <div class="stage-topline"><span>OPERATION ROUTE</span><span id="stage-count">08 / 08</span></div>
+            <div id="stage-nodes" class="stage-nodes" aria-label="关卡节点"></div>
+            <div class="stage-selected"><span class="stage-selected-label">当前节点</span><strong id="selected-stage">EA-1</strong><p id="stage-note">点击其他节点查看；地图截图来自提供的活动录屏。</p></div>
+          </div>
+        </div>
+        <figure class="stage-image"><img id="stage-image" src="assets/stage-route.webp" alt="摇曳的影关卡地图录屏画面" loading="lazy"><figcaption><span id="stage-caption">摇曳的影 · 关卡地图</span><span>SCREEN CAPTURE / 00:56</span></figcaption></figure>
+      </div>
+      <div class="stage-note-row"><span>※</span><p>此处是基于录屏整理的浏览示意；节点选择只切换展示状态，不代表游戏内通关进度。</p></div>
+    </section>
+
+    <section class="rewards section-shell" id="rewards" aria-labelledby="rewards-title">
+      <div class="section-heading"><div><p class="section-kicker">03 / REWARD EXCHANGE</p><h2 id="rewards-title">把兑换清单握在手里<span class="title-dot">.</span></h2></div><p>以录屏中显示的 1772 点为示例，点选物品，实时查看余量。</p></div>
+      <div class="rewards-layout">
+        <div class="reward-context"><img src="assets/shop-screen.webp" alt="待开启的生活兑换商店录屏画面" loading="lazy"><div class="reward-context-caption"><span>待开启的生活</span><span>录屏画面 / 01:28</span></div><div class="reward-context-bottom"><span>画面中的兑换商店</span><strong>LIVES YET TO BEGIN</strong></div></div>
+        <div class="reward-workspace"><div class="reward-toolbar"><div><span class="small-label">示例可用点数</span><strong>1,772 <small>POINTS</small></strong></div><div><span class="small-label">已选合计</span><strong id="selected-cost">0 <small>POINTS</small></strong></div><div class="remaining-box"><span class="small-label">预计剩余</span><strong id="remaining-points">1,772</strong></div></div><div class="reward-list-header"><span>录屏中的可见物品</span><button id="reset-rewards" type="button">清空选择 ↺</button></div><div id="reward-grid" class="reward-grid"></div><p class="reward-disclaimer">这是浏览用的兑换试算，不会更改游戏内物品或点数。</p></div>
+      </div>
+    </section>
+
+    <section class="archive section-shell" id="archive" aria-labelledby="archive-title">
+      <div class="section-heading"><div><p class="section-kicker">04 / STORY & MEMORY</p><h2 id="archive-title">留在画面里的故事<span class="title-dot">.</span></h2></div><p>切换录屏中的剧情回顾与回忆画集画面。</p></div>
+      <div class="archive-layout"><div class="archive-showcase"><img id="archive-image" src="assets/story-home.webp" alt="新火重燃剧情回顾插画" loading="lazy"><div class="archive-image-counter" id="archive-counter">01 / 03</div></div><div class="archive-info"><span class="small-label" id="archive-type">STORY LINE · TA</span><h3 id="archive-name">新火重燃</h3><p id="archive-description">录屏中的剧情回顾画面。插画以明亮色彩与人物群像构成，与活动主界面的灰烬和火焰形成呼应。</p><div class="archive-controls"><button id="archive-prev" type="button" aria-label="上一张">←</button><div id="archive-dots" class="archive-dots" aria-label="影像选择"></div><button id="archive-next" type="button" aria-label="下一张">→</button></div><div class="badge-mini"><img src="assets/badges.webp" alt="挽歌燃烧殆尽蚀刻章套组界面" loading="lazy"><div><span class="small-label">COLLECTION</span><strong>蚀刻章套组</strong><span>录屏画面显示 10 / 10 枚</span></div></div></div></div>
+    </section>
+
+    <section class="headhunt section-shell" id="headhunt" aria-labelledby="headhunt-title"><div class="headhunt-copy"><p class="section-kicker">05 / FINAL FRAME</p><h2 id="headhunt-title">自火中归还<span class="title-dot">.</span></h2><p>录屏最后展示的寻访界面，以「死芒」作为画面焦点。这里保留原始展示，不模拟实际寻访。</p><span class="headhunt-tag">RETURNED FROM A PYRE / 录屏画面</span></div><div class="headhunt-image"><img src="assets/headhunt.webp" alt="自火中归还寻访活动录屏画面，焦点为死芒" loading="lazy"></div></section>
+  </main>
+
+  <footer class="site-footer section-shell"><div class="footer-mark">E<span>/</span>A</div><p>基于用户提供的《明日方舟》SideStory 活动录屏制作的非官方交互导览。截图与视频仅用于呈现该资料内容。</p><a href="#top">返回顶部 ↑</a></footer>
+
+  <dialog id="video-dialog" class="video-dialog" aria-label="活动录屏"><div class="dialog-top"><div><span class="small-label">SOURCE RECORDING</span><strong>挽歌燃烧殆尽 · 活动录屏</strong></div><button id="close-video" type="button" aria-label="关闭视频">×</button></div><video id="source-video" controls preload="none" poster="assets/event-screen.webp"><source src="assets/recording.mp4" type="video/mp4">浏览器不支持视频播放。</video><p>本片段为用户提供的录屏压缩版本，时长约 2 分 43 秒。</p></dialog>
+</body>
+</html>
